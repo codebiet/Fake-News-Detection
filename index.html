@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/flatly/bootstrap.min.css" integrity="sha384-qF/QmIAj5ZaYFAeQcrQ6bfVMAh4zZlrGwTPY7T/M+iTTLJqJBJjwwnsE5Y0mV7QK" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+     <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.7.0/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/universal-sentence-encoder"></script>
+    <script src="predict.js"></script>
+
+    
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#"> 
+            <legend>
+                Fake News Detection
+            </legend>
+        </a>
+    </nav>
+    <br>
+
+    <div class="container" style="width:100%;">   
+        <fieldset>
+            <div class="form-group row">
+                <div class="col-sm-3"></div>
+                <label for="staticEmail" class="col-sm-2 col-form-label">
+                    Article Headline:
+                </label>
+                <div class="col-sm-7">
+                    <input type="text" id='headline' name='headline' placeholder='headline' required style="width:48%;">  
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-sm-3"></div>
+                <label for="staticEmail" class="col-sm-2 col-form-label">
+                    Article Body:
+                </label>
+                <div class="col-sm-7">
+                    <textarea rows="10" cols="50" id='article' name="article" placeholder="text" required></textarea>  
+                </div>
+            </div>
+
+             <div class="form-group row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-9">
+                    <button type="button" class="btn btn-primary" onclick="solveText()">Search Entities</button>  
+                </div>
+            </div>
+
+                 
+        </fieldset>
+    </div>  
+
+<div id="loading">
+
+</div>
+
+<div id="output" class="container-fluid text-center">
+
+      
+  
+    
+</div>
+
+<br>
+<br>
+
+<div class="jumbotron text-center">
+  <form class="form-inline">
+    <div class="input-group" style="padding-left:28%;">
+      <input name="url" id="url" class="form-control" size="50" required placeholder="url">
+      <div class="input-group-btn">
+        <button type="button" onclick="solveUrl()" class="btn btn-danger" value="https://timesofindia.indiatimes.com/city/lucknow">Search by Url</button>
+      </div>
+    </div>
+  </form>
+
+
+
+
+
+  <br>
+
+    <div class="container child1" style="visibility:hidden;">   
+        <!-- <fieldset> -->
+            <div class="form-group row">
+                <div class="card" style="width:100%;">
+                       <div id="image" style="margin-left:25%;width:50%;margin-top:5%;">
+                       </div>
+                       
+                        <div class="card-body">
+                            <h4 class="card-title"><div id="utitle"></div></h4>
+                            <p class="card-text"><div id="utext"></div></p>
+                            <div id="uoutput"></div>
+                            <p class="card-text"><div id="relatedNews"></div></p>
+                        </div>
+                </div>
+            </div>  
+    </div>
+</div>
+
+</body>
+</html>

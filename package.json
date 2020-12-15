@@ -1,0 +1,20 @@
+{
+  "name": "news",
+  "version": "1.0.0",
+  "description": "",
+  "main": "predict.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "google-news-scraper": "^1.0.6",
+    "newsapi": "^2.4.1",
+    "unfluff": "^3.2.0",
+    "@tensorflow/tfjs": "^2.7.0",
+    "express": "^4.17.1",
+    "requirejs": "^2.3.6"
+  }
+}
