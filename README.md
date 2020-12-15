@@ -1,5 +1,6 @@
 # Fake-News-Detection
   Here we create an easy-to-use system to detect the credibility of a user’s claim or article ,based on the concept of stance detection.
+  Run the Project Here : https://fake--news--detection.herokuapp.com/
 
 ### Pipeline :
 1. Users input a claim like “Obama is not a US citizen”.
